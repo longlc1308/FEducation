@@ -4,6 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
+        "beautiful": "prettier --single-quote --trailing-comma all --write **/*.{js,json} ",
         "start": "nodemon --inspect app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -21,8 +22,17 @@
         "url": "https://github.com/longlc1308/FEducation/issues"
     },
     "homepage": "https://github.com/longlc1308/FEducation#readme",
+    "lint-staged": {
+        "**/*.{js,json}": "prettier --single-quote --trailing-comma all --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "mongoose": "^5.12.8"
     },
     "devDependencies": {
         "husky": "^6.0.0",
