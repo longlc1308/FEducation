@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="mt-4">
+        <h3>Cập nhật khoá học</h3>
+        <form [formGroup]="frmCourse" autocomplete="false" novalidate="true">
+            <div class="form-group">
+                <label for="">Tên khoá học</label>
+                <input type="text" class="form-control" name="name" id="name" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="">Mô tả</label>
+                <input type="text" class="form-control" name="description" id="description" formControlName="description">
+            </div>
+
+            <div class="form-group">
+                <label for="">Trình độ</label>
+                <input type="text" class="form-control" name="level" id="level" formControlName="level">
+            </div>
+
+            <div class="form-group">
+                <label for="">Video ID</label>
+                <input type="text" class="form-control" name="videoId" id="videoId" formControlName="videoId">
+            </div>
+            <button type="submit" class="btn btn-primary">Lưu lại</button>
+        </form>
+    </div>
+</div>

@@ -1,8 +1,8 @@
-const sitesRouter = require('./../route/routes/sites.route')
+const coursesRouter = require('./routes/courses.route')
 
 
 function route(app) {
-    app.use('/api/site', sitesRouter);
+    app.use('/api/courses', coursesRouter);
 }
 
 module.exports = route;
